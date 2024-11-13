@@ -63,7 +63,7 @@ async def adicionar_saldo_via_comando(update: Update, context: CallbackContext):
 
         await update.message.reply_text(f"Adicionando {valor_adicional} ao saldo do usuário {user_iddd}...")
 
-        # Conexão com o banco de dados (substitua pela sua função real)
+        # Conexão com o banco de dados 
         conexao = await conexao_banco()  # Esta função deve retornar uma conexão com o banco de dados
         cursor = conexao.cursor()
 
