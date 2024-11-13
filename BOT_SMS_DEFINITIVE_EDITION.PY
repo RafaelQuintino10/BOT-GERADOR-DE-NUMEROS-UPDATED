@@ -115,7 +115,7 @@ async def zerar_saldo(update: Update, context: CallbackContext):
         user_iddd = context.args[0]  # Captura o primeiro argumento como o ID do usuário
         await update.message.reply_text(f"Zerando saldo para o usuário: {user_iddd}...")
 
-        # Conexão com o banco de dados (substitua pela sua função real)
+        # Conexão com o banco de dados 
         conexao = await conexao_banco()
         cursor = conexao.cursor()
         
