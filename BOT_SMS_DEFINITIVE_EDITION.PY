@@ -14,16 +14,13 @@ import sqlite3
 import pandas as pd
 
 
-# MEU_SMS_ACTIVATE_API_KEY = '3924d657fb95cebf09d6d5704A190eb2'
-VINICIUS_SMS_ACTIVATE_API_KEY = 'A48d191A508c09030fc535d3cdA11Abb'
+MEU_SMS_ACTIVATE_API_KEY = '3924d657fb95cebf09d6d5704A190eb2'
 TELEGRAM_BOT_TOKEN = '7894225433:AAEknYuQrHlFuXj_E5oR12g_DUbO_q8hwH8'
-VINICIUS_TELEGRAM_BOT_TOKEN = '7923859772:AAGI4OUD4aflnztlYw224pv7xFLmigYltb8'
 MP_ACCESS_TOKEN = 'APP_USR-3659660205672870-103020-e757331755777413d8214c1a1f9c11ce-1990304411'
-VINICIUS_MP_ACESS_TOKEN ='APP_USR-1078928113831670-110313-7499d86d659f876ba54dddb643a09684-1521366078'
+
 
 # Inicializa o cliente do Mercado Pago
-# sdk = mercadopago.SDK(VINICIUS_MP_ACESS_TOKEN)
-sdk = mercadopago.SDK(VINICIUS_MP_ACESS_TOKEN)
+sdk = mercadopago.SDK(MP_ACESS_TOKEN)
 
 user_payments = {}
 
@@ -336,7 +333,7 @@ async def rent_number(update: Update, context: ContextTypes.DEFAULT_TYPE, servic
 
     # Solicita o número
     params = {
-        'api_key': VINICIUS_SMS_ACTIVATE_API_KEY,
+        'api_key': SMS_ACTIVATE_API_KEY,
         'action': 'getNumber',
         'service': service,
         'country': 0 # 0 é para aluguel global
